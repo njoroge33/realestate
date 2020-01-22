@@ -4,8 +4,9 @@ from rest_framework import generics, status
 from .serializers import UserSerializer
 from rest_framework.response import Response
 from django.contrib.auth.hashers import make_password
+from rest_framework import viewsets
 
-class UserList(generics.ListAPIView):
+class UserList(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
