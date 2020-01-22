@@ -4,8 +4,10 @@ from django.db import models
 class Post(models.Model):
     house_image = models.ImageField(upload_to = 'posts/')
     description = models.TextField(max_length=300)
-    bedrooms_no = models.IntegerField()
-    bathrooms_no = models.IntegerField()
-    plot_size = models.IntegerField()
+    location = models.CharField(max_length=100)
+    bedrooms_no = models.PositiveIntegerField()
+    bathrooms_no = models.PositiveIntegerField()
+    plot_size = models.PositiveIntegerField()
+    cost = models.IntegerField()
     pub_date = models.DateTimeField(auto_now_add=True)
     
