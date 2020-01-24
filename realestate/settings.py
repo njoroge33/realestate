@@ -60,6 +60,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
+    "https://realestates-37595.firebaseapp.com/",
 ]
 
 ROOT_URLCONF = 'realestate.urls'
