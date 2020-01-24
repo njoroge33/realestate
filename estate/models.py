@@ -10,4 +10,9 @@ class Post(models.Model):
     plot_size = models.PositiveIntegerField()
     cost = models.IntegerField()
     pub_date = models.DateTimeField(auto_now_add=True)
+
+class Picture(models.Model):
+    description = models.TextField(max_length=300)
+    location = models.CharField(max_length=100)
+    pub_date = models.DateTimeField(auto_now_add=True)
     
