@@ -26,6 +26,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # Application definition
 
 INSTALLED_APPS = [
+    'pyuploadcare',
     'estate',
     'rest_framework',
     'rest_auth',
@@ -38,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
 ]
+
+UPLOADCARE = {
+    'pub_key': '322ad9cc91adc962969c',
+    'secret': '46b8c54080f39407daa9',
+}
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
